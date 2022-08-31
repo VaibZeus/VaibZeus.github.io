@@ -1,23 +1,42 @@
 @import "./PageStructure.css";
 
-ol p{
-    text-decoration:underline ;
+ol p {
+    text-decoration: underline;
     font-weight: bold;
 }
-h1{
+
+h1 {
     font-size: 50px;
 }
 
-a.Content:link,a.Content:visited {
+/* a.list:link,a.list:visited {
     text-decoration: inherit;
     color: darkmagenta;
 }
-.Content a:hover{
+a.list:hover{
+    color: grey;
+} */
+.list a:link,
+.list a:visited {
+    text-decoration: inherit;
+    color: darkslateblue;
+}
+
+.list a:hover {
     color: grey;
 }
-ol li{
+
+.sublist a:link,.sublist a:visited{
+    color:darkslategrey;
+}
+.sublist a:hover{
+    color: grey;
+}
+
+ol li {
     font-size: larger;
 }
-ul li{
-    font-size: large ;
+
+ul li {
+    font-size: large;
 }
