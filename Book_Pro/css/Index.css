@@ -26,10 +26,10 @@ a.list:hover{
     color: grey;
 } */
 
-.sublist a:link,.sublist a:visited{
+a.sublist:link,a.sublist:visited{
     color:darkslategrey;
 }
-.sublist a:hover{
+a.sublist:hover{
     color: grey;
 }
 
