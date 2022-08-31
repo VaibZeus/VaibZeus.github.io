@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Working with Text</title>
+    <link rel="stylesheet" href="./css/chapters.css">
+</head>
+
+<body>
+    <div class="stick">
+        <div class="header"><b>Book_Pro</b></div>
+        <div class="nav">
+            <a class="nav" href="./title.html">Title</a>
+            <a class="nav" href="./index.html">Index</a>
+            <a class="nav" href="./glossary.html">Glossary</a>
+        </div>
+    </div>
+    <div class="bdy">
+        <a class="Pane" href="./chapter1.html">&lt; Previous Page</a>
+
+        <div class="Content">
+            <span>Chapter 2</span> <br>
+            <h1>Working with Text</h1>
+            <hr>
+            <br>
+            <p>
+                The original versions of HTML
+                allowed you many ways to format text on a web page. However, most of these methods were
+                deprecated by the <a href="./glossary.html#Gw3c" class="glossary_anchors" id="w3c">W3C</a> when they later revised the HTML standards. This means the W3C
+                discourages the use of those tags, in favor of style sheets. Why? Because separating the styling
+                details from the rest of the content makes for a much cleaner, more efficient web page—one
+                more easily understood by browsers, search engines, and even your web site visitors.
+            </p>
+            <p>
+                Previous editions of this book explained those retired HTML tags—such as &lt;font&gt;
+                and &lt;b&gt;, in case you’ve heard of them—as well as alternative ways to format text with style
+                sheets. The only reason we continued to use those old tags was that many new browsers
+                weren’t yet supporting style sheets. But times have changed, and there is no longer any valid
+                reason for most web developers to use the font tag (or any other retired tags).
+                With that said, the rest of this chapter will focus on how to use style sheets to format the
+                text of your web pages.
+            </p>
+
+            <h2 id="organiseTxt">Organize Sections of Text</h2>
+            <p>
+                One important aspect of developing a web page is planning—especially when it comes to
+                organizing sections of content on that page. A great strength of style sheets is the ability to
+                easily apply groups of formatting characteristics to whole sections of text. For example,
+                suppose you have three paragraphs and a list making up the main body copy of a page, and
+                you want to see how the text in that section looks with a different font face and size. With the
+                old font tag you would need to make multiple code changes just to try a different font. But as
+                long as you’ve organized your content appropriately and used style sheets, the code changes
+                will be minimal.
+            </p>
+            <p>
+                The key to all this is the div tag. Amazingly, adding a simple
+                &lt;div&gt; to the code on your
+                page will cause no outward change in appearance when viewed in the browser. In fact, the div
+                tag does nothing by itself—it doesn’t even cause a line break. It is simply used as a container,
+                allowing you to manipulate its contents later with style sheets.
+            </p>
+
+            <h3>Identifying Natural Divisions</h3>
+            <p>
+                It’s normal for a web page to have natural divisions according to the type of content found
+                in each area of the page. A few common divisions or sections of a page might include the
+                navigation, the body copy, the header, and the footer. The code used to separate each section
+                might look similar to the following:
+            </p>
+
+            <pre class="line-numbers">
+            <code>
+            &lt;body&gt;
+                &lt;div id="header"&gt;
+                    Header content goes here.
+                &lt;/div&gt;
+                &lt;div id="bodyCopy"&gt;
+                    Body copy goes here.
+                &lt;/div&gt;
+                &lt;div id="footer"&gt;
+                    Footer content goes here.
+                &lt;/div&gt;
+            &lt;/body&gt;
+        </code>
+        </pre>
+
+            <p>
+                Once you’ve set up basic divisions like this—leaving the formatting to CSS instead of the
+                HTML tables—the possibilities are endless. Need to move the navigation from the top of your
+                page to the bottom . . . on ten different pages? If you put all of it into its own div . . . piece
+                of cake! Not only is it easy to move that entire navigation bar, you only have to edit the style
+                sheet—and not the individual HTML pages—to do so.
+            </p>
+
+            <h3>DIV + ID</h3>
+            <p>
+                When using the div tag to separate content areas, you also need to add the id attribute to
+                give each division a name (as I did with header, bodyCopy, and footer in the previous code
+                example). In the same way that a unique Social Security number is assigned as identification—
+                ID—for each person living in the U.S., so should a unique name be given to each division on
+                a web page. Once you’ve named your divisions, these content areas can easily be formatted in
+                the site’s style sheet, which might look something like the following:
+            </p>
+            <pre>
+            #header {border: 1px;}
+            #bodyCopy {font-family: Verdana; font-size: 12pt;}
+            #footer {font-size: 10pt;}
+        </pre>
+
+            <h3>Line Breaks</h3>
+            <p>
+                You can also use the br tag to add a line break in your HTML page. Typing the br tag in
+                HTML is the same as clicking the RETURN or ENTER key on your keyboard in a word processor. It
+                causes the browser to stop printing text on that line and drop down to the next line on the page.
+            </p>
+            <img class="miniImage" src="./images/Br.jpg" alt="exampleBR">
+            <br>
+
+
+            <h2 id="addHeading">Add Headings</h2>
+            <p>
+                One of the earliest means of formatting text was the heading tag. It is available in six levels of
+                importance from
+                %lt;h1&gt; down to %lt;h6&gt;, as shown in the following code:
+            </p>
+            <pre>
+            &lt;body&gt;
+                &lt;h1&gt;This is an example of heading 1 &lt;/h1&gt;
+                    This is text under heading 1
+                &lt;h2&gt;This is an example of heading 2&lt;/h2&gt;
+                    This is text under heading 2
+                &lt;h3&gt;This is an example of heading 3 &lt;/h3&gt;
+                    This is text under heading 3
+                &lt;h4&gt;This is an example of heading 4 &lt;/h4&gt;
+                    This is text under heading 4
+                &lt;h5&gt;This is an example of heading 5 &lt;/h5&gt;
+                    This is text under heading 5
+                &lt;h6&gt;This is an example of heading 6 &lt;/h6&gt;
+                    This is text under heading 6
+            &lt;/body&gt;
+        </pre>
+            <p>output:</p>
+            <img class="miniImage" src="./images/headings.jpg" alt="exampleHeading">
+            <p id="tip">
+                <b>Note:</b><br>
+                Using a heading tag automatically adds breaks before and after the heading because
+                these tags are <a href="./glossary.html#Gbct" class="glossary_anchors" id="bct">block-level container tags.</a>
+            </p>
+            <p>
+                You use the heading tags to tell the browser which pieces of text function as headings, and
+                then specify how to style them with CSS. So, you could quickly adjust the alignment of your
+                headings with an <a href="./glossary.html#Ginline" class="glossary_anchors" id="inline">inline style</a> by using
+                &lt;h3 style="text-align: right;"&gt;. Likewise,
+                you could use h3 as a selector in an internal style sheet (placed in between the opening and
+                closing head tags on your page) to specify the formatting options of all level-3 headings on the
+                page.
+            <pre>
+            &lt;style type="text/css"&gt;
+            h3 {
+            text-align: right;
+            }
+            &lt;/style&gt;
+        </pre>
+            </p>
+
+            <br>
+
+
+            <h2 id="styleSelection">Style Sections of Text by Changing Font Characteristics</h2>
+            <p>
+                Before you begin changing the font characteristics of a web page, you should note that visitors
+                to your web site have the ultimate control over these font characteristics. The following screen
+                shows how the user can customize one browser. Users can even choose to use their fonts,
+                overriding page-specified fonts, so you should consider these tags as recommendations for the
+                browser, but never rely on them for your page display.
+            </p>
+            <img src="./images/fontSetting.jpg" alt="exampleFontsettings" height="500px" width="800px">
+
+            <h3>Font Faces</h3>
+            <p>
+                When used in conjunction with the term font, the term face refers to the name of the font
+                you’d like to use on your page. In style sheets, we specify the font face with the font-family
+                property.
+            </p>
+            <p>
+                You can use the font-family property to specify virtually any font name you can think of,
+                but the person viewing your web page will be unable to see your page in that font face unless
+                he already has it loaded on his computer. So, if you specify your page to be displayed in Gill
+                Sans font, but the person viewing your page doesn’t have Gill Sans, he will see your page in
+                the browser’s default font face (usually Times New Roman).
+            </p>
+            <img class="miniImage" src="./images/Font.jpg" alt="exampleFont">
+            <p>
+                To compensate for the possibility that not all visitors will have the font you specify, you
+                can specify backup fonts in the value of the font-family property. If the browser cannot find
+                the first font face listed on the viewer’s computer, it then looks for the second font face, and
+                the third, and so forth until it comes up with a match. Once again, if the browser doesn’t find a
+                font face listed in your HTML file that is actually installed on the viewer’s system, it displays
+                the page in the default font (usually Times New Roman).
+            </p>
+            <img class="miniImage" src="./images/fontOptions.jpg" alt="fontOptions">
+            <p id="tip">
+                <b>Note:</b><br>
+                This process of providing a backup font name is also referred to as cascading.
+            </p>
+            <img class="fullImage" src="./images/FontTypes.jpg" alt="FontTypes">
+
+            <h3>Font Sizes</h3>
+            <p>
+                You can also use style sheets to change the size of the text. This is accomplished with the font-size
+                property
+                and any of the following possible values, as in: font-size: 12pt.
+            </p>
+            <p>
+                ● <b>Keyword:</b> xx-small, x-small, small, medium,
+                large, x-large, or
+                xx-large <br>
+                ● <b>Relative:</b> size Smaller or larger <br>
+                ● <b>Absolute size:</b> Number followed by the unit, as in 12pt (for 12 point) or 8px (for 8 pixels)
+            </p>
+        </div>
+
+        <a class="Pane" href="./chapter3.html">Next Page &gt;</a>
+    </div>
+    <div class="footer">&copy; Created by Kumar Vaibhav</div>
+</body>
+
+</html>

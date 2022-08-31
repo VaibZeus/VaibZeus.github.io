@@ -1,0 +1,23 @@
+@import "./PageStructure.css";
+
+ol p{
+    text-decoration:underline ;
+    font-weight: bold;
+}
+h1{
+    font-size: 50px;
+}
+
+.Content a{
+    text-decoration: inherit;
+    color: inherit;
+}
+.Content a:hover{
+    color: grey;
+}
+ol li{
+    font-size: larger;
+}
+ul li{
+    font-size: large ;
+}

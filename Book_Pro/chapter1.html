@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1:Basic Page Structure</title>
+    <link rel="stylesheet" href="./css/chapters.css">
+</head>
+
+<body>
+    <div class="stick">
+        <div class="header"><b>Book_Pro</b></div>
+        <div class="nav">
+            <a class="nav" href="./title.html">Title</a>
+            <a class="nav" href="./index.html">Index</a>
+            <a class="nav" href="./glossary.html">Glossary</a>
+        </div>
+    </div>
+    <div class="bdy">
+        <a class=Pane href="./index.html">&lt; Previous Page</a>
+        <div class="Content">
+            <span>Chapter 1</span> <br>
+            <h1>Basic Page Structure</h1>
+            <hr>
+
+
+            <h2><a name="creatingHTML">Creating an HTML file</a></h2>
+            <p>At their very core, <a class="glossary_anchors" href="./glossary.html#Ghtml" id="html"><b>HTML</b></a>
+                files are
+                simply text files with two additional features.
+            <ol>
+                <li>
+                    HTML files have an .html or .htm file extension. A file extension is an abbreviation that
+                    associates the file with the appropriate program or tool needed to access it. In most cases,
+                    this abbreviation follows a period and is three or four letters long.
+                </li>
+                <img class="miniImage" src="./images/URL2.jpg" alt="exampleURL">
+                <li>
+                    HTML files have tags. Tags are commands or code used to tell the computer how to display
+                    the page content.
+                </li>
+            </ol>
+            </p>
+            <p id="tip">
+                <b>Note: </b><br>
+                You might also see more advanced types of pages on the Internet, such as
+                <a href="./glossary.html#Gasp" class="glossary_anchors" id="asp">
+                    <b>Microsoft’s
+                        Active Server Pages (.asp)</b>
+                </a>
+                or those written in the
+                <a href="./glossary.html#Gxml" class="glossary_anchors" id="xml">Extensible Markup Language (.xml)</a>.
+
+            </p>
+            <img class="miniImage" src="./images/URL.jpg" alt="exampleURL">
+            <br>
+
+
+            <h2 id="prevHTML">Preview an HTML File in a Browser</h2>
+            <p>
+                You can view HTML files located on your personal computer within your own web browser.
+                It isn’t necessary for your files to be stored on a web server until you are ready to make them
+                visible on the Internet
+            </p>
+            <p>
+                When you want to preview a page, open your web browser and choose File | Open (or Open Page or Open
+                File,
+                depending on your browser), and then browse through your hard drive until you locate the HTML file you
+                want
+                to open. (Note, if you don’t see any File menus in IE, try pressing the ALT key to reveal those menus.)
+
+            </p>
+            <p>
+                If you’re going to make frequent changes to the HTML file in a text editor, and then switch back to a
+                web
+                browser to preview the page, keeping both programs (a text editor and a web browser) open at the same
+                time
+                makes sense. When using a basic text editor, the steps to edit and preview HTML files are
+            <ol>
+                <li>Open/return to your HTML file in a text editor.</li>
+                <li>Edit your HTML file in a text editor.</li>
+                <li>Save your HTML file in a text editor.</li>
+                <li>Open/return to your HTML file in a web browser</li>
+                <li>Click the Refresh or Reload button in your web browser to update the HTML page to reflect the
+                    changes
+                    you just made to it.</li>
+            </ol>
+            </p>
+            <p>
+                By keeping your HTML file open in both a text editor and a browser, you can easily make and preview
+                changes.
+            </p>
+            <img class="fullImage" src="./images/ssPreview.jpg" alt="preview">
+            <br>
+
+
+            <h2 id="descHTMLFormat">Describe and Apply the Basic
+                HTML Document Format</h2>
+            <p>
+                An HTML entity or tag is a command used to tell the browser how to display content on a
+                page. This command is similar to what happens behind the scenes when you highlight some
+                text in a <a href="./glossary.html#Gword" class="glossary_anchors" id="word">word processor</a> and
+                click the Italic button to make the text italicized. <br>
+                With HTML, instead of clicking a button to make text italicized, you can type a tag before
+                and after the text you want to emphasize, as in the following: <br>
+                <br>
+                <em>&lt;em&gt; text will be emphasized &lt;/em&gt;</em>
+            </p>
+            <img class="fullImage" src="./images/em.jpg" alt="emphasize">
+            <p>
+                You can easily recognize tags because they are placed within brackets (<>), or less-than and
+                    greater-than symbols. <br>
+                    Did you notice that the tag to emphasize text and make it italic is em? Given that piece of
+                    information, can you guess the tags to add a paragraph or create items in a list?
+            </p>
+            <table align="center" border="1">
+                <tr>
+                    <th>Purpose</th>
+                    <th>Tags</th>
+                </tr>
+                <tr>
+                    <td>creating paragraphs</td>
+                    <td>&lt;p&gt;</td>
+                </tr>
+                <tr>
+                    <td>add break line</td>
+                    <td>&lt;br&gt;</td>
+                </tr>
+                <tr>
+                    <td>add table</td>
+                    <td>&lt;table&gt;</td>
+                </tr>
+            </table>
+            <br>
+
+
+            <h2 id="setStylesheet">Set Up Style Sheets in an HTML File</h2>
+            <p>
+                The purpose of <a href="./glossary.html#Gcss" class="glossary_anchors" id="css">cascading style sheets
+                    (abbreviated CSS)</a> is to
+                separate the style of a web page from its content. <br>
+                The current HTML “rules” dictate that we only use HTML to identify the content of the
+                page, and then use a style sheet to specify the presentation of that content. This not only makes
+                web pages more accessible and usable to all users (regardless of their browsers, platforms,
+                operating systems, physical limitations, and so forth), but also to search engines and other
+                types of software.
+            </p>
+            <p id="tip">
+                <b>Tip: </b><br>
+                If you’ve ever used the Style drop-down menu in Microsoft Word, you’ve already used
+                a style sheet of sorts. The most basic style sheet might include a style called “Body Text,”
+                that specifies how the body text of the web page should look—which font and color to
+                use, how much space to leave around it, and so on.
+            </p>
+
+
+            <h3>Define the Style</h3>
+            <p>
+                To define a basic formatting style, you first must identify which tag you want to affect. This
+                tag is then called a selector in CSS. So, if you wanted to specify the style of all the level-2
+                headlines (&lt;h2&gt;) on a page, you would use h2 as your selector. <br><br>
+                h2 <br><br>
+                In fact, the selector is essentially the tag without the brackets. With that in mind, can you
+                guess what the selector for &lt;p&gt; would be? <br><br>
+                p <br><br>
+                Once you have a selector, you can define its properties. Similar to how attributes work
+                in HTML, CSS properties alter specific attributes of a selector. Returning to the preceding
+                example, if you want to change the style of the level-2 headlines on your page to a 14-point
+                Verdana font, italic, and blue, you can use the following properties:
+                <br><br>
+                font-family <br>
+                font-style <br>
+                font-size <br>
+                color <br><br>
+                When you specify values for properties, you are creating a declaration for that selector.
+                The declaration and selector together are then referred to as a set of rules, or a ruleset. In the
+                typical ruleset, the declaration is enclosed in curly brackets after the selector.
+                So here are the first few pieces of our ruleset: <br>
+                <img class="miniImage" src="./images/cssImg.jpg" alt="cssDescription">
+            </p>
+            <p>
+                And here is how they all fit together to tell the browser to display all level-2 headlines in the
+                Verdana font.
+            </p>
+            <p>
+                h2 {font-family: verdana;}
+            </p>
+            <p>
+                To specify the font size, color, and style (italic), we simply add on a few more of those
+                properties.
+            </p>
+            <pre>
+            h2 {
+            font-family: verdana;
+            font-size: 14pt;
+            color: blue;
+            font-style: italic;}
+        </pre>
+            <p>
+                At this point, you can probably start to see the pattern—a CSS property is followed by
+                a colon, and then its value, which in turn is followed by a semicolon.
+            </p>
+
+
+            <h3>Defining Values</h3>
+            <p>
+                As with attributes in HTML, properties have values. Most values can be specified in terms of
+                color, keyword, length, percentage, or URL, as listed in Table 2-2. Length and percentage units
+                can also be made positive or negative by adding a plus (+) or minus (−) sign in front of the
+                value.
+            </p>
+            <table border="1">
+                <tr>
+                    <th>Type of Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>When specifying color in a value, you can do so in one of three ways (see Chapter 3
+                        for more information on color): <br>
+                        - hexadecimal code, such as #000000 <br>
+                        - RGB values, such as rgb (0,0,0) or rgb (0%, 0%, 0%) <br>
+                        - one of the predefined keywords</td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
+                    <td>A keyword is a word defined in CSS that’s translated into a numerical value by the
+                        browser. For this reason, keywords are often considered relative because, ultimately,
+                        it’s up to the browser to decide how to render the content. An example of a keyword
+                        is small.</td>
+                </tr>
+                <tr>
+                    <td>Length</td>
+                    <td>In HTML, most units are defined in pixels. In CSS, however, you have the option of
+                        using many other types of units. For example, when specifying text sizes with the
+                        font-size property, you can use any of the following. (Abbreviations are shown
+                        in parentheses.) <br>
+                        - points (pt)—72 points in an inch<br>
+                        - picas (pc)—12 points in a pica<br>
+                        - pixels (px)— dots on the screen<br>
+                        - ems (em)—refers to the height of the font in general<br>
+                        - exs (ex)—refers to the height of an x in a particular font<br>
+                        - inches (in)<br>
+                        - millimeters (mm)<br>
+                        - centimeters (cm)</td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td>Relative percentages can be useful in CSS when used to position elements on a
+                        page. This is because percentages allow elements to move around, depending on
+                        how large the screen and window sizes are. When used in CSS, a percentage sign
+                        (%) following a numerical value, such as 100%, indicates a relationship between the
+                        surrounding elements.</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td>When you reference an absolute URL in CSS, use the following form:
+                        url (http://www.osborne.com)
+                        Similarly, relative URLs (typically those found within the current web site) are
+                        referenced in the following manner: url (home.html).</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <a class=Pane href="./chapter2.html">Next Page &gt;</a>
+    </div>
+    <div class="footer">&copy; Created by Kumar Vaibhav</div>
+</body>
+
+</html>

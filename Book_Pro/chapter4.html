@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Creating Lists</title>
+    <link rel="stylesheet" href="./css/chapters.css">
+</head>
+
+<body>
+    <div class="stick">
+        <div class="header"><b>Book_Pro</b></div>
+        <div class="nav">
+            <a class="nav" href="./title.html">Title</a>
+            <a class="nav" href="./index.html">Index</a>
+            <a class="nav" href="./glossary.html">Glossary</a>
+        </div>
+    </div>
+
+    <div class="bdy">
+        <a href="./chapter3.html" class="Pane">&lt; Previous Page</a>
+        <div class="Content">
+            <span>Chapter 4</span>
+            <h1>Creating Lists</h1>
+            <hr>
+            <br>
+            <p>
+                Lists are everywhere—on your refrigerator, in schoolbooks, next to the telephone, on bills, and
+                in all sorts of other documents. That’s why there’s a special set of tags just for creating lists.
+                This chapter focuses on the three different types of lists possible in HTML:
+            </p>
+
+            <ul class="UList1" type="Square">
+                <li>Ordered List</li>
+                <li>Unordered List</li>
+                <li>Definition List</li>
+            </ul>
+            <p>
+                Lists are especially useful in web pages to draw attention to short pieces of information.
+                Keep that in mind when you create your lists, and try to include short phrases, instead of long
+                sentences, in each list item.
+            </p>
+
+
+            <h2 id="OrderedList">Use Ordered Lists in a Web Page</h2>
+            <p>
+                An ordered list is one in which each item is preceded by a number or letter. For example:
+                My favorite fruits are
+            </p>
+            <ol class="OList1">
+                <li>raspberries</li>
+                <li>strawberries</li>
+                <li>apples</li>
+            </ol>
+            <p>
+                If you want to create the previous list on a web page, you should use an ordered list. Here’s
+                what the HTML code would look like:
+            </p>
+            <img src="./images/Olist1.jpg" alt="Olist1">
+            <p id="tip">
+                <b>NOTE:</b><br>
+                While it’s not required, indent the list items to make seeing the structure of the list
+                easier.
+            </p>
+            <p>
+                Notice any number is not included in my list. This is because I used the ol tag to tell the
+                browser this is an ordered list. When browsers see ordered lists, they know to place a number
+                in front of each list item.
+            </p>
+            <p>
+                The default type of ordered list uses Arabic numbers, but you can use the type attribute
+                to change that. Table 8-1 identifies the different types of ordered lists you can create with the
+                type attribute. <br>
+                To change the type of ordered list, add the type attribute and its value to the opening ol tag.
+            </p>
+            <pre>
+            &lt;ol type="I"&gt;
+                &lt;li&gt;Introduction&lt;/li&gt;
+                &lt;li&gt;Understanding the Medium&lt;/li&gt;
+                &lt;li&gt;Basic Page Structure&lt;/li&gt;
+            &lt;/ol&gt;
+        </pre>
+            <table border="1">
+                <tr>
+                    <th>Type Attribute Value</th>
+                    <th>Numbering Style</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Numbers</td>
+                    <td>1,2,3,…</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>Lowercase alphabet</td>
+                    <td>a,b,c,…</td>
+                </tr>
+                <tr>
+                    <td>A </td>
+                    <td>Uppercase alphabet</td>
+                    <td>A,B,C,…</td>
+                </tr>
+                <tr>
+                    <td>i</td>
+                    <td>Lowercase Roman numerals</td>
+                    <td>i,ii,iii,…</td>
+                </tr>
+                <tr>
+                    <td> I</td>
+                    <td> Uppercase Roman numerals</td>
+                    <td> I, II, III,…</td>
+                </tr>
+            </table>
+            <p id="tip">
+                <b>NOTE:</b><br>
+                The type and start attributes are deprecated by the W3C, which prefers that you
+                use style sheets to customize the look of your lists, but they are still widely supported by
+                the browsers. Using style sheets to style lists is discussed later in this chapter.
+            </p>
+            <p>
+                Here, I changed the type to “I”, which tells the browser to place uppercase Roman
+                numerals in front of each list item. So the previous code would create a list like the following:
+            </p>
+            <ol type="I">
+                <li>Introduction</li>
+                <li>Understanding the Medium</li>
+                <li>Basic Page Structure</li>
+            </ol>
+            <p>
+                You can also specify the starting number or letter for an ordered list with the start attribute.
+                The default for the starting number is 1. To change this, add the start attribute to your ol tag.
+            </p>
+            <pre>
+            &lt;ol type="a" start="3"&gt;
+                &lt;li&gt;Color&lt;/li&gt;
+                &lt;li&gt;Working with Text&lt;/li&gt;
+                &lt;li&gt;Working with Links&lt;/li&gt;
+            &lt;/ol&gt;
+        </pre>
+            <p>
+                Even though the value of the type attribute may be something other than Arabic numerals,
+                the value of the start attribute is always an integer. So, in the previous example, start="3"
+                actually tells the browser to start the list with the third letter because type="a".
+            </p>
+            <ol type="a" start="3">
+                <li>Color</li>
+                <li>Working with Text</li>
+                <li>Working with Links</li>
+            </ol>
+            <p>
+                If you want to change an individual value—for example, if you want to make the third item
+                in the list use the letter g—you can add the value attribute to the specific li tag.
+            </p>
+            <pre>
+                &lt;ol type="a" start="3"&gt;
+                    &lt;li&gt;Color&lt;/li&gt;
+                    &lt;li&gt;Working with Text&lt;/li&gt;
+                    &lt;li value="7"&gt;Working with Links&lt;/li&gt;
+                &lt;/ol&gt;
+            </pre>
+            <p>
+                As with the start attribute, the value attribute is always an integer. The browser looks
+                at the value of the third list item and changes it to g because the type is a.
+            </p>
+            <ol type="a" start="3">
+                <li>Color</li>
+                <li>Working with Text</li>
+                <li value="7">Working with Links</li>
+            </ol>
+            <h2 id="UnorderedList">Use Unordered Lists in a Web Page</h2>
+            <p>
+                The second type of list is similar to the first, except unordered lists don’t use numbers or
+                letters. As the name suggests, unordered lists don’t rely on order for importance. These lists
+                use bullets to precede each list item. The following is an example of an unordered list:
+            </p>
+            <ul>
+                <li>red</li>
+                <li>green</li>
+                <li>blue</li>
+            </ul>
+            <p>
+                You still use the li tag to identify each item in the list, but instead of beginning with the
+                ol tag, unordered lists begin with the ul tag.
+            </p>
+            <pre>
+            &lt;ul&gt;
+                &lt;li&gt;red&lt;/li&gt;
+                &lt;li&gt;green&lt;/li&gt;
+                &lt;li&gt;blue&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+            <p>
+                Aside from that, the code used to create the first two types of lists is almost identical. In
+                fact, you can even use the type attribute here to change the style of the <a
+                    href="./glossary.html#Gbullet" class="glossary_anchors" id="bullet">bullets</a>. Three possible
+                options exist for bullet style:
+            </p>
+            <p>
+                ● <b>disc</b> Usually displayed as a small, filled-in circle <br>
+                ● <b>circle</b> Usually displayed as an open circle <br>
+                ● <b>square</b> Usually displayed as an open (Mac) or filled-in (Windows) square
+            </p>
+            <p>
+                Initially, all unordered lists default to the disc style, which is usually represented as
+                a small, filled-in circle. However, if you nest unordered lists—that is, if you include an
+                unordered list in another unordered list—the default value changes.
+            </p>
+
+            <h2 id="DefinitionList">Use Definition Lists in a Web Page</h2>
+            <p>
+                The third type of list you can create in HTML is called a definition list. As its name suggests,
+                you might use a definition list to show terms and their definitions. For example, in the following
+                list, the term is listed on the first line, and then the definition is on the line below the term.
+            </p>
+
+            <dl>
+                <dt>W3C</dt>
+                <dd>The World Wide Web Consortium was created in 1994 to develop
+                    standards and <a href="./glossary.html#Gprotocols" class="glossary_anchors"
+                        id="protocols">protocols</a> for the World Wide Web.</dd>
+                <dt>HTML</dt>
+                <dd>Hypertext Markup Language is the authoring language used to
+                    create documents for the World Wide Web.</dd>
+            </dl>
+            <p>
+                A definition list works just like this one, where you use HTML tags to identify the terms
+                and definitions for each of the list items. <br><br>
+                The code to create the page shown in the preceding illustration looks like this:
+            </p>
+            <pre>
+            &lt;dl&gt;
+                &lt;dt&gt;W3C&lt;/dt&gt;
+                    &lt;dd&gt;The World Wide Web Consortium was created in 1994 to develop
+                    standards and protocols for the World Wide Web.&lt;/dd&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                    &lt;dd&gt;Hypertext Markup Language is the authoring language used to
+                    create documents for the World Wide Web.&lt;/dd&gt;
+            &lt;/dl&gt;
+        </pre>
+            <p>
+                You can use more than one dd for each dt if you need to; the browser will just simply indent
+                each line below the dt.
+            </p>
+            <p id="tip">
+                <b>NOTE:</b><br>
+                Although it can be quite useful to use the dd tag outside a definition list as a way
+                to indent text, this isn’t valid HTML, and it can produce unpredictable results in
+                some browsers. Because indenting text with the dd tag does the same thing as the
+                <a href="./glossary.html#Gbqtag" class="glossary_anchors" id="bqtag">blockquote tag</a>, you might as well use that tag to indent a block of text.
+            </p>
+
+            <h2 id="NestedList">Combine and Nest Two or More
+                Types of Lists in a Web Page</h2>
+            <p>
+                You can also use another list inside itself or even one type of list inside another type of list.
+                Each time you use a list inside another list, you are nesting lists. Perhaps the best example for
+                nested lists is an outline like those created for a term paper.
+            </p>
+            <ol type="I">
+                <li>Introduction</li>
+                <li>Part I
+                    <ol type="A">
+                        <li>Description</li> class="nav"
+                        <li>Examples
+                            <ol type="1">
+                                <li>Reference One</li>
+                                <li>Reference Two</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Part 2</li>
+                <li>Summary</li>
+            </ol>
+            <p>
+                Can you imagine what the HTML code would look like for the preceding outline? The best
+                solution would be to use a series of nested ordered lists as shown in the following illustration
+                and code.
+            </p>
+            <pre>
+            &lt;ol type="I"&gt;
+                &lt;li&gt;Introduction&lt;/li&gt;
+                &lt;li&gt;Part I
+                    &lt;ol type="A"&gt;
+                        &lt;li&gt;Description&lt;/li&gt;
+                        &lt;li&gt;Examples
+                            &lt;ol type="1"&gt;
+                                &lt;li&gt;Reference One&lt;/li&gt;
+                                &lt;li&gt;Reference Two&lt;/li&gt;
+                            &lt;/ol&gt;
+                        &lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Part 2&lt;/li&gt;
+                &lt;li&gt;Summary&lt;/li&gt;
+            &lt;/ol&gt;
+        </pre>
+            <p>
+                As I mentioned before, you can also nest one type of list inside another type. For example,
+                you could include a bulleted list inside a definition list to give further clarification to a
+                definition description. Look at the following illustration and code to see what I mean.
+            </p>
+            <pre>
+            &lt;dl&gt;
+                &lt;dt&gt;&lt;b&gt;Morning&lt;/b&gt;&lt;/dt&gt;
+                    &lt;dd&gt;Corinna wakes up around 7:00.&lt;/dd&gt;
+                    &lt;dd&gt;Change her diaper and dress her.&lt;/dd&gt;
+                    &lt;dd&gt;Feed her breakfast. Some of her favorites are:
+                    &lt;ul&gt;
+                        &lt;li&gt;Waffles&lt;/li&gt;
+                        &lt;li&gt;Oatmeal&lt;/li&gt;
+                        &lt;li&gt;Cereal&lt;/li&gt;
+                        &lt;li&gt;Fruit&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;/dd&gt;
+            &lt;/dl&gt;
+        </pre>
+            <img src="./images/nested1.jpg" alt="nested1" class="miniImage" border="1">
+            <p id="tip">
+                <b>TIP</b><br>
+                The most important thing to remember when nesting lists is always to confirm that you
+                have closed each list. If you notice a section of your nested list is indented more than it
+                should be or continues within the list above it, try drawing semicircles from each of the
+                list’s opening and closing tags. If any of the circles cross or don’t have an ending spot,
+                you may need to recheck your work for errors.
+            </p>
+        </div>
+        <a href="./glossary.html" class="Pane">Next Page &gt;</a>
+    </div>
+    <div class="footer">&copy; Created by Kumar Vaibhav</div>
+</body>
+
+</html>
