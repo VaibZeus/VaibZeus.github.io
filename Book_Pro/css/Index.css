@@ -9,14 +9,14 @@ h1 {
     font-size: 50px;
 }
 
-/* a.list:link,a.list:visited {
+a.list:link,a.list:visited {
     text-decoration: inherit;
     color: darkmagenta;
 }
 a.list:hover{
     color: grey;
-} */
-.list a:link,
+}
+/* .list a:link,
 .list a:visited {
     text-decoration: inherit;
     color: darkslateblue;
@@ -24,7 +24,7 @@ a.list:hover{
 
 .list a:hover {
     color: grey;
-}
+} */
 
 .sublist a:link,.sublist a:visited{
     color:darkslategrey;
