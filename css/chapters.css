@@ -1,0 +1,81 @@
+@import "./PageStructure.css";
+
+.Content span {
+    font-size: 30px;
+}
+
+.Content h2 {
+    color: rgb(16, 10, 107);
+    margin-top: 50px;
+    font-family: 'Trebuchet MS';
+    font-size: 30px;
+}
+
+.Content p,
+ol {
+    font-size: 20px;
+}
+
+.miniImage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    margin-left: 15%;
+}
+
+.fullImage {
+    height: fit-content;
+    width: 110%;
+}
+
+table {
+    border-color: grey;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: skyblue;
+}
+
+th,
+td {
+    padding: 10px;
+    width: auto;
+}
+
+pre {
+    font-size: larger;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+#tip {
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+h4 {
+    font-size: 20px;
+    color: rgb(114, 69, 156);
+}
+
+ul.UList1 {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+
+a.glossary_anchors:link,
+a.glossary_anchors:visited {
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    font-weight:bold;
+}
+a.glossary_anchors:hover{
+    text-decoration: underline;
+    color: brown;
+}
