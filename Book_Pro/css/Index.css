@@ -10,13 +10,12 @@ h1{
 
 .Content a{
     text-decoration: inherit;
-    color: inherit;
+    color: darkmagenta;
 }
 .Content a:hover{
     color: grey;
 }
 ol li{
-    color:darkmagenta;
     font-size: larger;
 }
 ul li{
