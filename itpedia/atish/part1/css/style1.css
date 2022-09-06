@@ -1,0 +1,13 @@
+@import "./pageformat.css";
+
+main{
+    color: black;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: 50px;
+}
+img{
+    padding-left: 50px;
+    padding-right: 25px;
+    width: 400px;
+}

@@ -1,0 +1,75 @@
+
+body {
+    display: contents;
+}
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    padding: 10px;
+    background-color: rgb(124, 126, 240);
+    text-align: center;
+    color: rgb(206, 214, 214);
+    border-color: rgb(7, 1, 75);
+    border-width: 1px;
+}
+
+.nav {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    margin-bottom: 5px;
+
+    background-color: rgb(57, 59, 93);
+    text-align: center;
+    color: rgb(206, 214, 214);
+    border-color: rgb(7, 1, 75);
+    border-width: 1px;
+}
+
+a.nav:link,
+a.nav:visited {
+    border-radius: 10px;
+    padding: 6px;
+    text-decoration: none;
+    flex: 33.3%;
+    color: azure;
+    border-width: 0;
+    margin-bottom: 0;
+}
+
+a.nav:hover {
+    background-color: azure;
+    color: rgb(26, 3, 78);
+}
+
+
+div {
+    flex: auto;
+}
+
+.Content {
+    border-radius: 10px;
+    min-height: 250px;
+    max-height: 250px;
+    padding: 10%;
+    width: 79%;
+    border-style: groove;
+    margin: 3px;
+    overflow-y: auto;
+}
+.stick{
+    border-radius: 10px;
+    border-style: groove;
+    width: 99%;
+}
+.footer{
+    border-radius: 10px;
+    border-style: groove;
+    margin-top: 20px;
+    text-align: center;
+    width: 95.5%;
+    background-color: rgb(30, 8, 92);
+    color: rgb(234, 233, 237);
+    padding: 30px;
+}

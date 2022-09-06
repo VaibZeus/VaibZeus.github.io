@@ -1,0 +1,35 @@
+@import url("./css/style.css");
+.course{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+p{
+    color: rgb(59, 58, 58);
+    font-size: 16px;
+    font-weight: 3000;
+    line-height: 22px;
+    padding: 10px;
+    width: 300px;
+}
+.crs-col{
+    
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.profImage{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
